@@ -316,9 +316,12 @@ input:focus, textarea:focus {
   left: 20px;
   top: 20px;
   z-index: 3;
+  transition: .3s;
 }
 
-
+.burger-button:hover {
+  transform: rotate(180deg);
+}
 
  /* Mediaquery para tabletas */
 
@@ -514,5 +517,20 @@ input:focus, textarea:focus {
     font-size: 30px;
   }
 /* guitarras */
+
+.video-responsive-contenedor {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-responsive-src {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
 }
 /* Mediaquery para smarthphones (fin)*/
