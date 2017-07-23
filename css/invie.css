@@ -96,6 +96,7 @@ input:focus, textarea:focus {
 }
 
 .background {
+  background-color: #466173;
   background-image: url('../images/background.png');
   background-size: cover;
 }
@@ -316,6 +317,7 @@ input:focus, textarea:focus {
   left: 20px;
   top: 20px;
   z-index: 3;
+  color: white;
   transition: .3s;
 }
 
@@ -451,6 +453,12 @@ input:focus, textarea:focus {
 
 /* Mediaquery para smarthphones (inicio)*/
 @media screen and (max-width: 500px) {
+  .header {
+    position: static;
+  }
+  .header .contenedor {
+    position: static;
+  }
   /* menu */
   .menu {
     background: rgba(255, 60, 88, .7);

@@ -109,6 +109,7 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
     var $burgerButton = document.getElementById('burger-button');
     var $menu = document.getElementById('menu');
@@ -126,16 +127,32 @@
       }
       mediaQuery();
 
+      function showMenu () {
+        $menu.classList.add('active')
+      };
+
+      function hideMenu () {
+        $menu.classList.remove('active')
+      };
+
       function toggleMenu(){
         $menu.classList.toggle('active')
-
-        $burgerButton.classList.toggle('icon-close');
       };
 
       // Lazy loading
       var bLazy = new Blazy({
         selector: 'img'
       });
+
+      // Gestos touch
+    /*  var hammertime = new Hammer(myElement, myOptions);
+      hammertime.on('pan', function(ev) {
+        console.log(ev);
+      }); */
+      var $body = document.body;
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
     </script>
   </body>
 </html>
