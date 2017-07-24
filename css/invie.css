@@ -636,6 +636,8 @@ video {
 
 
 /* Mediaquery para adaptar estilos al background de pantallas retina */
-/* @media screen and (-webkit-min-device-pixel-ratio: 2) {
-
-} */
+ @media screen and (-webkit-min-device-pixel-ratio: 2) {
+   .background {
+     background-image: url('../images/background2x.png');
+   }
+}
