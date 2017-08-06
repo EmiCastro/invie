@@ -211,6 +211,7 @@ input:focus, textarea:focus {
   float: right;
   position: relative;
   top: -127px;
+  margin-top: 50px;
 }
 
 .izquierda {
